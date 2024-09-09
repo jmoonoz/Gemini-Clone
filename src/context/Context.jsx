@@ -23,12 +23,21 @@ const ContextProvidor = (props) => {
     setResultData("");
     setLoading(true);
     setShowResult(true);
-    setRecentPrompt(input);
+    let response;
+    if (prompt !== undefined) {
+      response = await run(prompt);
+      setRecentPrompt(prompt);
+    } else {
+      setPrevPrompt((prev) => [...prev, input]);
+      setRecentPrompt(input);
+      response = await run(input);
+    }
+    // setRecentPrompt(input);
     // this is used to help store previous prompt in the side bar
-    setPrevPrompt((prev) => [...prev, input]);
+    // setPrevPrompt((prev) => [...prev, input]);
 
     // once response is submitted the input section will reset
-    const response = await run(input);
+    // const response = await run(input);
     let responseArray = response.split("**");
     // this will remove the "undefined" word that appears at tge begginign of eacg new results
     let newResponse = "";
