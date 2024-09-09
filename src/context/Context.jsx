@@ -30,7 +30,8 @@ const ContextProvidor = (props) => {
     // once response is submitted the input section will reset
     const response = await run(input);
     let responseArray = response.split("**");
-    let newResponse;
+    // this will remove the "undefined" word that appears at tge begginign of eacg new results
+    let newResponse = "";
     // where ever a ** is detected it will bolden the words
     // this will happen at the begging of every response statment that is posted
 

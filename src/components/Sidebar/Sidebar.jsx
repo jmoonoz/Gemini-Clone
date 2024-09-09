@@ -29,7 +29,8 @@ const Sidebar = () => {
               return (
                 <div className="recent-entry">
                   <img src={assets.message_icon} alt="" />
-                  <p>{item} ...</p>
+                  {/* this will show a portion of previous prompts on the sidebar */}
+                  <p>{item.slice(0, 18)} ...</p>
                 </div>
               );
             })}
