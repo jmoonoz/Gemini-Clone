@@ -7,19 +7,50 @@ const ContextProvidor = (props) => {
   const [input, setInput] = useState("");
   const [recentPrompt, setRecentPrompt] = useState("");
   const [prevPrompt, setPrevPrompt] = useState([]);
-  const [showResults, setShowResult] = useState(false);
+  const [showResult, setShowResult] = useState(false);
   const [loading, setLoading] = useState(false);
   const [resultData, setResultData] = useState("");
 
-  const onSend = async (prompt) => {
+  // this function will store the strings and using setTime out will print it out on an interval
+  const delayPara = (index, nextWord) => {
+    setTimeout(function name(params) {
+      setResultData((prev) => prev + nextWord);
+    }, 75 * index);
+  };
 
+  // on submit these useState effects will set place
+  const onSend = async (prompt) => {
     setResultData("");
     setLoading(true);
-    // setShowResults(true);
+    setShowResult(true);
+    setRecentPrompt(input);
+    // this is used to help store previous prompt in the side bar
+    setPrevPrompt((prev) => [...prev, input]);
 
     // once response is submitted the input section will reset
     const response = await run(input);
-    setResultData(response);
+    let responseArray = response.split("**");
+    let newResponse;
+    // where ever a ** is detected it will bolden the words
+    // this will happen at the begging of every response statment that is posted
+
+    for (let i = 0; i < responseArray.length; i++) {
+      if (i === 0 || i % 2 !== 1) {
+        newResponse += responseArray[i];
+      } else {
+        newResponse += "<b>" + responseArray[i] + "</b>";
+      }
+    }
+    // this will breate line spaces where ever there is a *
+    let newResponse2 = newResponse.split("*").join("</br>");
+    // this section of code is for the type writer effect
+    // it will concat the words through a for loop and into the delaypara
+    // which will print out the string letter by letter
+    let newResponseArray = newResponse2.split(" ");
+    for (let i = 0; i < newResponseArray.length; i++) {
+      const nextWord = newResponseArray[i];
+      delayPara(i, nextWord + " ");
+    }
     setLoading(false);
     setInput("");
   };
@@ -32,11 +63,11 @@ const ContextProvidor = (props) => {
     onSend,
     setRecentPrompt,
     recentPrompt,
-    showResults,
+    showResult,
     loading,
     resultData,
     input,
-    setInput
+    setInput,
   };
 
   return (
