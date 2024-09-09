@@ -17,6 +17,11 @@ const ContextProvidor = (props) => {
       setResultData((prev) => prev + nextWord);
     }, 75 * index);
   };
+  const newChat = ()=>{
+    setLoading(false);
+    setShowResult(false);
+
+  }
 
   // on submit these useState effects will set place
   const onSend = async (prompt) => {
@@ -32,12 +37,7 @@ const ContextProvidor = (props) => {
       setRecentPrompt(input);
       response = await run(input);
     }
-    // setRecentPrompt(input);
-    // this is used to help store previous prompt in the side bar
-    // setPrevPrompt((prev) => [...prev, input]);
-
-    // once response is submitted the input section will reset
-    // const response = await run(input);
+ 
     let responseArray = response.split("**");
     // this will remove the "undefined" word that appears at tge begginign of eacg new results
     let newResponse = "";
@@ -78,6 +78,7 @@ const ContextProvidor = (props) => {
     resultData,
     input,
     setInput,
+    newChat
   };
 
   return (
