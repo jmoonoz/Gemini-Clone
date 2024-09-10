@@ -7,15 +7,17 @@
   justify-content: space-between;
   background-color: #f0f4f9;
   padding: 25px 15px;
-
+  
   img {
     width: 20px;
+    
   }
 
   .menu {
     display: block;
     margin-left: 10px;
     cursor: pointer;
+
   }
 
   .new-chat {
@@ -34,6 +36,7 @@
   .recent {
     display: flex;
     flex-direction: column;
+    animation: fadeIn 1.5s ;
   }
 
   .recent-title {
@@ -67,4 +70,9 @@
 
   }
 }
-
+@media (max-width: 600px) {
+  .sidebar{
+    display: none;
+  }
+  
+}

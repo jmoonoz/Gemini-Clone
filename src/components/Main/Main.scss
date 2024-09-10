@@ -172,3 +172,23 @@
     display: none;
   }
 }
+
+@media (max-width: 600px){
+  .main-bottom{
+    input{
+      flex: none;
+      width: 50px;
+
+    }
+    img{
+      width: 20px;
+    }
+  }
+  .search-box{
+    padding: 5px 10px;
+    div{
+      gap: 5px;
+    }
+  }
+
+}

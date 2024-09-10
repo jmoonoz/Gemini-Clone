@@ -86,7 +86,10 @@ const Main = () => {
             <div>
               <img src={assets.gallery_icon} alt="" />
               <img src={assets.mic_icon} alt="" />
-              <img onClick={() => onSend()} src={assets.send_icon} alt="" />
+              {/* ternary operator for inputting text in the input box, which will reveal the send icon */}
+              {input ? (
+                <img onClick={() => onSend()} src={assets.send_icon} alt="" />
+              ) : null}
             </div>
           </div>
           <p className="bottom-info">Gemini information may be inaccurate</p>

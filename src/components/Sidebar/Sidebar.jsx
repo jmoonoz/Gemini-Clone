@@ -17,6 +17,7 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="top">
+        {/* to open and close the side bar menu */}
         <img
           onClick={() => setExtended((prev) => !prev)}
           className="menu"

@@ -17,11 +17,12 @@ const ContextProvidor = (props) => {
       setResultData((prev) => prev + nextWord);
     }, 75 * index);
   };
-  const newChat = ()=>{
+
+  // this will load a new window for questions
+  const newChat = () => {
     setLoading(false);
     setShowResult(false);
-
-  }
+  };
 
   // on submit these useState effects will set place
   const onSend = async (prompt) => {
@@ -37,7 +38,7 @@ const ContextProvidor = (props) => {
       setRecentPrompt(input);
       response = await run(input);
     }
- 
+
     let responseArray = response.split("**");
     // this will remove the "undefined" word that appears at tge begginign of eacg new results
     let newResponse = "";
@@ -78,7 +79,7 @@ const ContextProvidor = (props) => {
     resultData,
     input,
     setInput,
-    newChat
+    newChat,
   };
 
   return (
