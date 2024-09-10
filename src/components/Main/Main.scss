@@ -17,6 +17,10 @@
       border-radius: 50%;
       backdrop-filter: grey;
     }
+    
+    p:hover, img:hover{
+      cursor: pointer;
+    }
   }
 
   .main-container {
@@ -62,6 +66,7 @@
         right: 10px;
       }
 
+
       p {
         color: #585858;
         font-size: 17px;
@@ -91,8 +96,8 @@
       border-radius: 50px;
 
       .icon-circle{
-        padding: 10px;
-        border-radius: 50%;
+        padding: 8px;
+        border-radius: 50px;
       }
 
       .icon-circle:hover{
@@ -140,6 +145,9 @@
     img {
       width: 40px;
       border-radius: 50%;
+    }
+    img:hover{
+      cursor: pointer;
     }
     .result-data {
       display: flex;

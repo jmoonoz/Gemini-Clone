@@ -14,12 +14,14 @@ const Main = () => {
     input,
   } = useContext(Context);
 
+  const user= "https://avatars.githubusercontent.com/u/39196818?v=4";
+
   return (
-    <div className="main">
+    <div className="main" id="main" >
       <div className="nav">
-        <p>Gemini</p>
+        <p href="#main">Gemini</p>
         <img
-          src="https://avatars.githubusercontent.com/u/39196818?v=4"
+          src={user}
           alt=""
         />
       </div>
@@ -32,7 +34,7 @@ const Main = () => {
               <p>
                 <span>Hello, Hola!</span>
               </p>
-              <p>How can I help you today</p>
+              <p>Hablo ingles y Espanol</p>
             </div>
             <div className="cards">
               <div className="card">
@@ -57,7 +59,7 @@ const Main = () => {
           // this is the results of questions asked
           <div className="result">
             <div className="result-title">
-              <img src={assets.user_icon} alt="" />
+              <img src={user} alt="" />
               <p>{recentPrompt}</p>
             </div>
             <div className="result-data">
@@ -84,7 +86,7 @@ const Main = () => {
               onChange={(e) => setInput(e.target.value)}
               value={input}
               type="text"
-              placeholder="Enter Prompt Here"
+              placeholder="Enter Prompt Here / Ingrese el mensaje aquí"
             />
             <div>
               <div className="icon-circle">
