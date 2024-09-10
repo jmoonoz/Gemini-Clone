@@ -1,8 +1,27 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Google Gemini Clone by Joel Muñoz
+## Installation
 
-Currently, two official plugins are available:
+This is a simple react application that you can easily set up and fire tup through visual studios.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Download all the files and open within your visual studio IDE
+## Deployment
+
+To deploy this project run
+
+```bash
+  npm install
+```
+
+once all the dependecies are installed run the following code
+
+
+```bash
+  npm run dev
+```
+
+A link will appear in your CLI, while holding onto command click the link.
+
+The application should open in a window broswer 
+
+
