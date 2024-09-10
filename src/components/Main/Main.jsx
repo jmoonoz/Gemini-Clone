@@ -18,7 +18,7 @@ const Main = () => {
     <div className="main">
       <div className="nav">
         <p>Gemini</p>
-        <img src={assets.user_icon} alt="" />
+        <img src="https://avatars.githubusercontent.com/u/39196818?v=4" alt="" />
       </div>
       <div className="main-container">
         {/* this will show the response of questions asked to Gemini */}

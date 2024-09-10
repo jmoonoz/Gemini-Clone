@@ -15,6 +15,7 @@
     img {
       width: 40px;
       border-radius: 50%;
+      backdrop-filter: grey;
     }
   }
 
@@ -173,22 +174,20 @@
   }
 }
 
-@media (max-width: 600px){
-  .main-bottom{
-    input{
+@media (max-width: 600px) {
+  .main-bottom {
+    input {
       flex: none;
       width: 50px;
-
     }
-    img{
+    img {
       width: 20px;
     }
   }
-  .search-box{
+  .search-box {
     padding: 5px 10px;
-    div{
+    div {
       gap: 5px;
     }
   }
-
 }
