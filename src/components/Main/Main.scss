@@ -90,6 +90,15 @@
       padding: 10px;
       border-radius: 50px;
 
+      .icon-circle{
+        padding: 10px;
+        border-radius: 50%;
+      }
+
+      .icon-circle:hover{
+        background-color: #e2e6eb;
+      }
+
       img {
         width: 20px;
       }

@@ -18,7 +18,10 @@ const Main = () => {
     <div className="main">
       <div className="nav">
         <p>Gemini</p>
-        <img src="https://avatars.githubusercontent.com/u/39196818?v=4" alt="" />
+        <img
+          src="https://avatars.githubusercontent.com/u/39196818?v=4"
+          alt=""
+        />
       </div>
       <div className="main-container">
         {/* this will show the response of questions asked to Gemini */}
@@ -84,11 +87,17 @@ const Main = () => {
               placeholder="Enter Prompt Here"
             />
             <div>
-              <img src={assets.gallery_icon} alt="" />
-              <img src={assets.mic_icon} alt="" />
+              <div className="icon-circle">
+                <img src={assets.gallery_icon} alt="" />
+              </div>
+              <div className="icon-circle">
+                <img src={assets.mic_icon} alt="" />
+              </div>
               {/* ternary operator for inputting text in the input box, which will reveal the send icon */}
               {input ? (
-                <img onClick={() => onSend()} src={assets.send_icon} alt="" />
+                <div className="icon-circle">
+                  <img onClick={() => onSend()} src={assets.send_icon} alt="" />
+                </div>
               ) : null}
             </div>
           </div>
