@@ -38,19 +38,19 @@ const Main = () => {
             </div>
             <div className="cards">
               <div className="card">
-                <p>Such beautifull places to see on an upcoming trip</p>
+                <p>"Search beautiful places to see on an upcoming trip"</p>
                 <img src={assets.compass_icon} alt="" />
               </div>
               <div className="card">
-                <p>Breifly sumarize this concept: urban planing</p>
+                <p>"Briefly summarize this concept: urban planning"</p>
                 <img src={assets.bulb_icon} alt="" />
               </div>
               <div className="card">
-                <p>Brainstorm team bonding activities for the teams retreat</p>
+                <p>"Brainstorm team bonding activities for the teams retreat"</p>
                 <img src={assets.message_icon} alt="" />
               </div>
               <div className="card">
-                <p>Improve the readability for the following code</p>
+                <p>"Improve the readability for the following code"</p>
                 <img src={assets.code_icon} alt="" />
               </div>
             </div>
