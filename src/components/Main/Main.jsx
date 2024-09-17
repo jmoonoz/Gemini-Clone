@@ -50,7 +50,7 @@ const Main = () => {
                 <img src={assets.message_icon} alt="" />
               </div>
               <div className="card">
-                <p>"Improve the readability for the following code"</p>
+                <p>"Improve readability for the following code: "</p>
                 <img src={assets.code_icon} alt="" />
               </div>
             </div>
