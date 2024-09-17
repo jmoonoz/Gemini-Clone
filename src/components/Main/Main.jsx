@@ -34,7 +34,7 @@ const Main = () => {
               <p>
                 <span>Hello, Hola!</span>
               </p>
-              <p>Hablo ingles y Espanol</p>
+              <p>Hablo Ingles y Espanol</p>
             </div>
             <div className="cards">
               <div className="card">
