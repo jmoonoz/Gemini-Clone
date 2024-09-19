@@ -1,11 +1,17 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
-import "./index.css";
+import "../src/style/index.scss";
 import ContextProvidor from "./context/Context.jsx";
+import {
+  DarkModeContext,
+  DarkModeContextProvider,
+} from "./context/DarkModeContext.jsx";
 
 createRoot(document.getElementById("root")).render(
-  <ContextProvidor>
-    <App />
-  </ContextProvidor>
+  <DarkModeContextProvider>
+    <ContextProvidor>
+      <App />
+    </ContextProvidor>
+  </DarkModeContextProvider>
 );
