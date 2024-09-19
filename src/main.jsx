@@ -6,7 +6,7 @@ import ContextProvidor from "./context/Context.jsx";
 import {
   DarkModeContext,
   DarkModeContextProvider,
-} from "./context/DarkModeContext.jsx";
+} from "./context/darkModeContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <DarkModeContextProvider>
