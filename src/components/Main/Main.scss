@@ -12,7 +12,7 @@
     justify-content: space-between;
     font-size: 22px;
     padding: 20px;
-    color: #585858;
+    color: themed("textColor");
 
     div {
       display: flex;

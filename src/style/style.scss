@@ -1,24 +1,28 @@
+
 $themes: (
+ 
     light: (
-        textColor: #000,
+        textColor: #585858,
         bg: white,
         bgCard: #f0f4f9,
-        logo: darkblue,
-        bgSoft: #f6f3f3,
-        textColorSoft: #555,
-        border: lightgray,
+        bgCardHover: #dfe4ea,
+        bgIconHover: #e2e6eb,
+        entryColor: #282828,
+        bgNewChat: #e6eaf1,
     ),
     dark: (
-        textColor: whitesmoke,
-        bg: #222,
-        logo: white,
-        bgSoft: #333,
-        textColorSoft: lightgray,
-        border: #444,
+      textColor: #fafafa,
+        bg: #292929,
+        bgCard: rgba(29, 33, 38),
+        bgCardHover: #a1a1a1,
+        bgIconHover: #767676,
+        entryColor: #fafafa,
+        bgNewChat: #e6eaf1,
     ),
   );
   
   @mixin themify($themes) {
+    // will iterate through each child and change the name, from light to dark
     @each $theme, $map in $themes {
       .theme-#{$theme} & {
         $theme-map: () !global;
@@ -37,7 +41,7 @@ $themes: (
     }
   }
   
-  @function themed($key) {
+  @function theme($key) {
     @return map-get($theme-map, $key);
   }
   
@@ -52,3 +56,4 @@ $themes: (
       @content;
     }
   }
+  

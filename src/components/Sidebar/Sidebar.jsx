@@ -2,6 +2,13 @@ import React, { useContext, useState } from "react";
 import "./Sidebar.scss";
 import { assets } from "../../assets/assets";
 import { Context } from "../../context/Context";
+import { DarkModeContext } from "../../context/darkModeContext";
+import AddIcon from '@mui/icons-material/Add';
+import SettingsIcon from '@mui/icons-material/Settings';
+import MenuIcon from '@mui/icons-material/Menu';
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import HistoryIcon from '@mui/icons-material/History';
+import { HistoryOutlined } from "@mui/icons-material";
 
 const Sidebar = () => {
   const [extended, setExtended] = useState(false);
@@ -14,47 +21,62 @@ const Sidebar = () => {
     await onSend(prompt);
   };
 
+  const { darkMode } = useContext(DarkModeContext);
+
   return (
-    <div className="sidebar">
-      <div className="top">
-        {/* to open and close the side bar menu */}
-        <img
-          onClick={() => setExtended((prev) => !prev)}
-          className="menu"
-          src={assets.menu_icon}
-          alt=""
-        />
-        <div onClick={()=>newChat()} className="new-chat">
-          <img src={assets.plus_icon} alt="" />
-          {extended ? <p>New Chat</p> : null}
-        </div>
-        {extended ? (
-          <div className="recent">
-            <p className="recent-title">Recent</p>
-            {prevPrompt.map((item, index) => {
-              return (
-                <div onClick={()=>loadPrompt(item)} className="recent-entry">
-                  <img src={assets.message_icon} alt="" />
-                  {/* this will show a portion of previous prompts on the sidebar */}
-                  <p>{item.slice(0, 18)} ...</p>
-                </div>
-              );
-            })}
+    // <div className={`theme-${darkMode ? "dark" : "light"}`}>
+    <div className="theme-dark">
+      <div className="sidebar">
+        <div className="top">
+          {/* to open and close the side bar menu */}
+
+          {/* <img
+            onClick={() => setExtended((prev) => !prev)}
+            className="menu"
+            src={assets.menu_icon}
+            alt=""
+          /> */}
+          <MenuIcon onClick={() => setExtended((prev) => !prev)}
+            className="menu" />
+          <div onClick={() => newChat()} className="new-chat">
+            {/* <img src={assets.plus_icon} alt="" />*/}
+            <AddIcon />
+            {extended ? <p>New Chat</p> : null}
           </div>
-        ) : null}
-      </div>
-      <div className="bottom">
-        <div className="bottom-item recent-entry">
-          <img src={assets.question_icon} alt="" />
-          {extended ? <p>Help</p> : null}
+          {extended ? (
+            <div className="recent">
+              <p className="recent-title">Recent</p>
+              {prevPrompt.map((item, index) => {
+                return (
+                  <div
+                    onClick={() => loadPrompt(item)}
+                    className="recent-entry"
+                  >
+                    <img src={assets.message_icon} alt="" />
+                    {/* this will show a portion of previous prompts on the sidebar */}
+                    <p>{item.slice(0, 18)} ...</p>
+                  </div>
+                );
+              })}
+            </div>
+          ) : null}
         </div>
-        <div className="bottom-item recent-entry">
-          <img src={assets.history_icon} alt="" />
-          {extended ? <p>Activity</p> : null}
-        </div>
-        <div className="bottom-item recent-entry">
-          <img src={assets.setting_icon} alt="" />
-          {extended ? <p>Settings</p> : null}
+        <div className="bottom">
+          <div className="bottom-item recent-entry">
+            <HelpOutlineIcon />
+            {/* <img src={assets.question_icon} alt="" /> */}
+            {extended ? <p>Help</p> : null}
+          </div>
+          <div className="bottom-item recent-entry">
+            {/* <img src={assets.history_icon} alt="" /> */}
+            <HistoryOutlined />
+            {extended ? <p>Activity</p> : null}
+          </div>
+          <div className="bottom-item recent-entry">
+            {/* <img src={assets.setting_icon} alt="" /> */}
+            <SettingsIcon />
+            {extended ? <p>Settings</p> : null}
+          </div>
         </div>
       </div>
     </div>
