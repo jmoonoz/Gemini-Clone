@@ -21,11 +21,8 @@ const Sidebar = () => {
     await onSend(prompt);
   };
 
-  const { darkMode } = useContext(DarkModeContext);
 
   return (
-    // <div className={`theme-${darkMode ? "dark" : "light"}`}>
-    <div className="theme-dark">
       <div className="sidebar">
         <div className="top">
           {/* to open and close the side bar menu */}
@@ -72,7 +69,7 @@ const Sidebar = () => {
           </div>
         </div>
       </div>
-    </div>
+
   );
 };
 

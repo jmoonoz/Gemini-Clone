@@ -9,7 +9,7 @@ import { DarkModeContextProvider } from "./context/darkModeContext.jsx";
 createRoot(document.getElementById("root")).render(
   <DarkModeContextProvider>
     <ContextProvidor>
-        <App />
+        <App data-theme="darkmode" />
     </ContextProvidor>
   </DarkModeContextProvider>
 );

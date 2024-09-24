@@ -6,6 +6,7 @@ import LightModeIcon from "@mui/icons-material/LightMode";
 import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
 import MicNoneIcon from '@mui/icons-material/MicNone';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
+import Brightness4OutlinedIcon from '@mui/icons-material/Brightness4Outlined';
 
 const Main = () => {
   const {
@@ -19,17 +20,18 @@ const Main = () => {
   } = useContext(Context);
 
   const user = "https://avatars.githubusercontent.com/u/39196818?v=4";
+  
 
   // const { darkMode } = useContext(DarkModeContext);
 
   return (
     <div className="main" id="main">
-      <div className="theme-dark">
-        {/* <div className={`theme-${darkMode ? "dark" : "light"}`}> */}
+
         <div className="nav">
           <p href="#main">Gemini</p>
           <div>
-            <LightModeIcon fontSize="medium" />
+            {/* <LightModeIcon fontSize="medium" /> */}
+            <Brightness4OutlinedIcon/>
             <img src={user} alt="" />
           </div>
         </div>
@@ -124,7 +126,7 @@ const Main = () => {
           </div>
         </div>
       </div>
-    </div>
+
   );
 };
 

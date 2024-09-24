@@ -11,8 +11,15 @@
   min-height: 100vh;
   display: flex;
   animation: fadeIn 1.5s;
-  // background-color: black;
+  --background-color: white;
+  --primary-text-color: #585858;
+  --secondary-text-color: #282828;
+  --third-text-color: #c4c7c5;
+  --surface-color:#f0f4f9;
+  --surface-card-hover: #dfe4ea;
+  --surface-sidebar-bg: #e6eaf1;
 }
+
 
 @keyframes fadeIn {
   0% {
