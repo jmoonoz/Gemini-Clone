@@ -1,10 +1,9 @@
-@import "../../style/style.scss";
-
 .main {
   flex: 1;
   min-height: 100vh;
   padding-bottom: 15vh;
   position: relative;
+  // background-color: themed("bg");
 
   .nav {
     display: flex;
@@ -12,7 +11,7 @@
     justify-content: space-between;
     font-size: 22px;
     padding: 20px;
-    color: themed("textColor");
+    color: #585858;
 
     div {
       display: flex;
@@ -50,7 +49,6 @@
 
     img:hover,
     svg:hover {
-      box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
       -webkit-transform: scale(1.1);
       transform: scale(1.1);
     }

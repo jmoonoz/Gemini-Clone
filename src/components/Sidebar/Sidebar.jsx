@@ -3,12 +3,12 @@ import "./Sidebar.scss";
 import { assets } from "../../assets/assets";
 import { Context } from "../../context/Context";
 import { DarkModeContext } from "../../context/darkModeContext";
-import AddIcon from '@mui/icons-material/Add';
 import SettingsIcon from '@mui/icons-material/Settings';
 import MenuIcon from '@mui/icons-material/Menu';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
-import HistoryIcon from '@mui/icons-material/History';
 import { HistoryOutlined } from "@mui/icons-material";
+import AddIcon from '@mui/icons-material/Add';
+import CommentOutlinedIcon from '@mui/icons-material/CommentOutlined';
 
 const Sidebar = () => {
   const [extended, setExtended] = useState(false);
@@ -29,13 +29,6 @@ const Sidebar = () => {
       <div className="sidebar">
         <div className="top">
           {/* to open and close the side bar menu */}
-
-          {/* <img
-            onClick={() => setExtended((prev) => !prev)}
-            className="menu"
-            src={assets.menu_icon}
-            alt=""
-          /> */}
           <MenuIcon onClick={() => setExtended((prev) => !prev)}
             className="menu" />
           <div onClick={() => newChat()} className="new-chat">
@@ -52,7 +45,7 @@ const Sidebar = () => {
                     onClick={() => loadPrompt(item)}
                     className="recent-entry"
                   >
-                    <img src={assets.message_icon} alt="" />
+                    <CommentOutlinedIcon />
                     {/* this will show a portion of previous prompts on the sidebar */}
                     <p>{item.slice(0, 18)} ...</p>
                   </div>
