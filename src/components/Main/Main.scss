@@ -82,7 +82,7 @@
     .card {
       height: 200px;
       padding: 15px;
-      background-color: #f0f4f9;
+      background-color: var(--surface-bg-color);
       border-radius: 10px;
       position: relative;
       cursor: pointer;
@@ -91,7 +91,7 @@
         width: 35px;
         padding: 5px;
         position: absolute;
-        background-color: white;
+        background-color: var(--background-color);
         border-radius: 20px;
         bottom: 10px;
         right: 10px;
@@ -121,7 +121,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 20px;
-      background-color: #f0f4f9;
+      background-color: var(--surface-bg-color);
       padding: 10px;
       border-radius: 50px;
 
@@ -131,7 +131,7 @@
       }
 
       .icon-circle:hover {
-        background-color: #e2e6eb;
+        background-color: var(--icone-bg-hover);
       }
 
       img {
