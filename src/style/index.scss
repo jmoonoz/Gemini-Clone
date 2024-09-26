@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
 * {
   padding: 0;
@@ -11,26 +11,37 @@
   min-height: 100vh;
   display: flex;
   animation: fadeIn 1.5s;
+  --main-bg: white;
   --background-color: white;
   --primary-text-color: #585858;
   --secondary-text-color: #282828;
   --third-text-color: #c4c7c5;
-  --surface-bg-color:#f0f4f9;
+  --surface-bg-color: #f0f4f9;
   --surface-card-hover: #dfe4ea;
   --surface-sidebar-bg: #e6eaf1;
   --icone-bg-hover: #e2e6eb;
+  --icon-fill:white;
 }
 
+[data-theme="dark"] {
+  --main-bg: rgb(19,19,20);
+  --background-color: rgb(17, 17, 17);
+  --primary-text-color: rgba(255, 255, 255, 0.597);
+  --secondary-text-color: #c5c4c4;
+  --third-text-color: #c4c7c5;
+  --surface-bg-color: rgb(30,31,32);
+  --surface-card-hover: rgb(38, 39, 41);
+  --surface-sidebar-bg: #86868639;
+  --icon-bg-hover: #e2e6eb;
+  --icon-fill:white;
+}
 
 @keyframes fadeIn {
   0% {
     opacity: 0;
-
   }
 
   100% {
     opacity: 1;
-
   }
-
 }

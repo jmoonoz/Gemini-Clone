@@ -3,7 +3,7 @@
   min-height: 100vh;
   padding-bottom: 15vh;
   position: relative;
-  // background-color: themed("bg");
+  background-color: var(--main-bg);
 
   .nav {
     display: flex;
@@ -87,12 +87,13 @@
       position: relative;
       cursor: pointer;
 
-      img {
+      svg {
+        fill: var(--icon-fill);
         width: 35px;
-        padding: 5px;
+        padding: 3px;
         position: absolute;
         background-color: var(--background-color);
-        border-radius: 20px;
+        border-radius: 10px;
         bottom: 10px;
         right: 10px;
       }
@@ -124,6 +125,7 @@
       background-color: var(--surface-bg-color);
       padding: 10px;
       border-radius: 50px;
+      
 
       .icon-circle {
         padding: 8px;
@@ -145,13 +147,18 @@
         outline: none;
         padding: 8px;
         font-size: 18px;
+        color: var(--secondary-text-color);
       }
+      
 
       div {
         display: flex;
         align-items: center;
         gap: 15px;
       }
+    }
+    .search-box:hover{
+      background-color: var(--surface-card-hover);
     }
     .bottom-info {
       font-size: 13px;

@@ -3,7 +3,11 @@ import "./Main.scss";
 import { assets } from "../../assets/assets";
 import { Context } from "../../context/Context";
 import LightModeIcon from "@mui/icons-material/LightMode";
+import ExploreOutlinedIcon from '@mui/icons-material/ExploreOutlined';
+import LightbulbOutlinedIcon from '@mui/icons-material/LightbulbOutlined';
 import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
+import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
+import CodeOutlinedIcon from '@mui/icons-material/CodeOutlined';
 import MicNoneIcon from '@mui/icons-material/MicNone';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 import Brightness4OutlinedIcon from '@mui/icons-material/Brightness4Outlined';
@@ -25,7 +29,7 @@ const Main = () => {
   // const { darkMode } = useContext(DarkModeContext);
 
   return (
-    <div className="main" id="main">
+    <div className="main" id="main" data-theme="dark" >
 
         <div className="nav">
           <p href="#main">Gemini</p>
@@ -49,21 +53,25 @@ const Main = () => {
               <div className="cards">
                 <div className="card">
                   <p>"Search beautiful places to see on an upcoming trip"</p>
-                  <img src={assets.compass_icon} alt="" />
+                  <ExploreOutlinedIcon />
+                  {/* <img src={assets.compass_icon} alt="" /> */}
                 </div>
                 <div className="card">
                   <p>"Briefly summarize this concept: urban planning"</p>
-                  <img src={assets.bulb_icon} alt="" />
+                  {/* <img src={assets.bulb_icon} alt="" /> */}
+                  <LightbulbOutlinedIcon />
                 </div>
                 <div className="card">
                   <p>
                     "Brainstorm team bonding activities for the teams retreat"
                   </p>
-                  <img src={assets.message_icon} alt="" />
+                  <ChatBubbleOutlineOutlinedIcon />
+                  {/* <img src={assets.message_icon} alt="" /> */}
                 </div>
                 <div className="card">
                   <p>"Improve readability for the following code:"</p>
-                  <img src={assets.code_icon} alt="" />
+                  <CodeOutlinedIcon />
+                  {/* <img src={assets.code_icon} alt="" /> */}
                 </div>
               </div>
             </>

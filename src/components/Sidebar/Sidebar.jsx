@@ -2,7 +2,6 @@ import React, { useContext, useState } from "react";
 import "./Sidebar.scss";
 import { assets } from "../../assets/assets";
 import { Context } from "../../context/Context";
-import { DarkModeContext } from "../../context/darkModeContext";
 import SettingsIcon from '@mui/icons-material/Settings';
 import MenuIcon from '@mui/icons-material/Menu';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
@@ -23,7 +22,7 @@ const Sidebar = () => {
 
 
   return (
-      <div className="sidebar">
+      <div className="sidebar" data-theme="dark">
         <div className="top">
           {/* to open and close the side bar menu */}
           <MenuIcon onClick={() => setExtended((prev) => !prev)}
