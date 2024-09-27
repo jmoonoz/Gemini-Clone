@@ -11,6 +11,7 @@
   min-height: 100vh;
   display: flex;
   animation: fadeIn 1.5s;
+  font-family: outfit;
   --main-bg: white;
   --background-color: white;
   --primary-text-color: #585858;
@@ -19,21 +20,27 @@
   --surface-bg-color: #f0f4f9;
   --surface-card-hover: #dfe4ea;
   --surface-sidebar-bg: #e6eaf1;
-  --icone-bg-hover: #e2e6eb;
-  --icon-fill:white;
+  --icon-color-fill: #e2e6eb;
+  --icon-bg-hover: #dfe4ea;
+  --icon-fill:rgb(40, 40, 40);
 }
 
 [data-theme="dark"] {
   --main-bg: rgb(19,19,20);
   --background-color: rgb(17, 17, 17);
-  --primary-text-color: rgba(255, 255, 255, 0.597);
+  --primary-text-color: rgb(227, 227, 227);
   --secondary-text-color: #c5c4c4;
   --third-text-color: #c4c7c5;
   --surface-bg-color: rgb(30,31,32);
   --surface-card-hover: rgb(38, 39, 41);
   --surface-sidebar-bg: #86868639;
-  --icon-bg-hover: #e2e6eb;
+  --icon-color-fill: rgb(197, 196, 196);
+  --icon-bg-hover: #e2e6eb29;
   --icon-fill:white;
+}
+.app{
+  display: flex;
+  width: 100%;
 }
 
 @keyframes fadeIn {

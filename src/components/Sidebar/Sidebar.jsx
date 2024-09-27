@@ -22,7 +22,7 @@ const Sidebar = () => {
 
 
   return (
-      <div className="sidebar" data-theme="dark">
+      <div className="sidebar" data-theme="light">
         <div className="top">
           {/* to open and close the side bar menu */}
           <MenuIcon onClick={() => setExtended((prev) => !prev)}
