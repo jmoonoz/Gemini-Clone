@@ -13,6 +13,8 @@ import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
 import Brightness4OutlinedIcon from "@mui/icons-material/Brightness4Outlined";
 
 const Main = () => {
+
+  
   const {
     onSend,
     recentPrompt,
@@ -23,17 +25,13 @@ const Main = () => {
     input,
   } = useContext(Context);
 
+  const user = "https://avatars.githubusercontent.com/u/39196818?v=4";
+
 
 
   return (
     <div className="main" id="main" >
-      {/* <div className="nav">
-        <p href="#main">Gemini</p>
-        <div>
-          <Brightness4OutlinedIcon onClick={toggleDarkMode} />
-          <img src={user} alt="" />
-        </div>
-      </div> */}
+
       <div className="main-container">
         {/* this will show the response of questions asked to Gemini */}
         {!showResult ? (
@@ -83,6 +81,7 @@ const Main = () => {
                   <hr />
                 </div>
               ) : (
+                // post results in
                 <p dangerouslySetInnerHTML={{ __html: resultData }}>
                   {/* {resultData} */}
                 </p>
