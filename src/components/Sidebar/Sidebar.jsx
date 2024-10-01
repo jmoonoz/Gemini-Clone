@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
 import "./Sidebar.scss";
-import { assets } from "../../assets/assets";
 import { Context } from "../../context/Context";
 import SettingsIcon from '@mui/icons-material/Settings';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -25,8 +24,7 @@ const Sidebar = () => {
       <div className="sidebar" data-theme="light">
         <div className="top">
           {/* to open and close the side bar menu */}
-          <MenuIcon onClick={() => setExtended((prev) => !prev)}
-            className="menu" />
+          <MenuIcon onClick={() => setExtended((prev) => !prev)} className="menu" />
           <div onClick={() => newChat()} className="new-chat">
             {/* <img src={assets.plus_icon} alt="" />*/}
             <AddIcon />

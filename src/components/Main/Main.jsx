@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
 import "./Main.scss";
-import { assets } from "../../assets/assets";
 import { Context } from "../../context/Context";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import ExploreOutlinedIcon from "@mui/icons-material/ExploreOutlined";
@@ -14,7 +13,7 @@ import Brightness4OutlinedIcon from "@mui/icons-material/Brightness4Outlined";
 
 const Main = () => {
 
-  
+
   const {
     onSend,
     recentPrompt,
